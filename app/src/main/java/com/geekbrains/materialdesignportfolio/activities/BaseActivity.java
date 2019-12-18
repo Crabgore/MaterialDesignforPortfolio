@@ -1,10 +1,12 @@
-package com.geekbrains.materialdesignportfolio;
+package com.geekbrains.materialdesignportfolio.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+
+import com.geekbrains.materialdesignportfolio.R;
 
 public class BaseActivity extends AppCompatActivity {
     SharedPreferences preferences;

@@ -13,7 +13,6 @@
         <item name="colorPrimary">@color/defaultColorPrimary</item>
         <item name="colorPrimaryDark">@color/defaultColorPrimaryDark</item>
         <item name="colorAccent">@color/defaultColorAccent</item>
-        <item name="android:windowBackground">@color/defaultBackgroundColor</item>
     </style>
 
     <style name="blueAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -21,7 +20,6 @@
         <item name="colorPrimary">@color/blueColorPrimary</item>
         <item name="colorPrimaryDark">@color/blueColorPrimaryDark</item>
         <item name="colorAccent">@color/blueColorAccent</item>
-        <item name="android:windowBackground">@color/blueBackgroundColor</item>
     </style>
 
     <style name="redAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -29,7 +27,6 @@
         <item name="colorPrimary">@color/redColorPrimary</item>
         <item name="colorPrimaryDark">@color/redColorPrimaryDark</item>
         <item name="colorAccent">@color/redColorAccent</item>
-        <item name="android:windowBackground">@color/redBackgroundColor</item>
     </style>
 
     <style name="DefaultAppTheme.NoActionBar">

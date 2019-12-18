@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NatureFragment extends Fragment {
+    public static MyTabsAdapter myTabAdapter;
+
     private List<Fragment> fragments = new ArrayList<>();
     private List<String> titles = new ArrayList<>();
 
@@ -32,7 +34,7 @@ public class NatureFragment extends Fragment {
 
         View layout = inflater.inflate(R.layout.nature_fragment, container, false);
 
-        initUI(layout);
+//        initUI(layout);
 
         initLists();
 
@@ -41,6 +43,12 @@ public class NatureFragment extends Fragment {
         initPager(layout);
 
         return layout;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        myTabAdapter.notifyDataSetChanged();
     }
 
     private void initUI(View layout) {
@@ -75,7 +83,7 @@ public class NatureFragment extends Fragment {
     }
 
     private void initPager(View layout) {
-        MyTabsAdapter myTabAdapter = new MyTabsAdapter(getChildFragmentManager(), fragments, titles);
+        myTabAdapter = new MyTabsAdapter(getChildFragmentManager(), fragments, titles);
 
         ViewPager viewPager = layout.findViewById(R.id.viewPager);
         viewPager.setAdapter(myTabAdapter);

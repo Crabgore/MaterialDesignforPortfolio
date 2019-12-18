@@ -1,10 +1,11 @@
-package com.geekbrains.materialdesignportfolio;
+package com.geekbrains.materialdesignportfolio.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.geekbrains.materialdesignportfolio.R;
 import com.google.android.material.snackbar.Snackbar;
 
 public class EnterActivity extends BaseActivity {

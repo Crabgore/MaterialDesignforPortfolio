@@ -10,7 +10,7 @@
 
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
         <LinearLayout
             android:orientation="vertical"
@@ -23,11 +23,11 @@
                 android:layout_height="wrap_content"
                 android:background="@color/defaultColorPrimary" />
 
-            <androidx.viewpager.widget.ViewPager
+            <com.geekbrains.materialdesignportfolio.WrappingViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+                android:layout_height="wrap_content"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
         </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
