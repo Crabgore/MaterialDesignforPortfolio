@@ -18,6 +18,7 @@ import com.geekbrains.materialdesignportfolio.adapters.MyAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class VegetableFragment extends Fragment {
     private List<String> list = new ArrayList<>();
@@ -58,7 +59,7 @@ public class VegetableFragment extends Fragment {
         MyAdapter myAdapter = new MyAdapter(list, drawables);
         recyclerView.setAdapter(myAdapter);
 
-        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL);
+        DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(Objects.requireNonNull(getContext()), LinearLayoutManager.VERTICAL);
         dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.separator));
         recyclerView.addItemDecoration(dividerItemDecoration);
     }

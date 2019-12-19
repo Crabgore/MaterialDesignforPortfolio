@@ -11,15 +11,15 @@ import android.view.animation.Transformation;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-public class WrappingViewPager extends ViewPager {
+public class MyViewPager extends ViewPager {
 
     private Boolean mAnimStarted = false;
 
-    public WrappingViewPager(Context context) {
+    public MyViewPager(Context context) {
         super(context);
     }
 
-    public WrappingViewPager(Context context, AttributeSet attrs){
+    public MyViewPager(Context context, AttributeSet attrs){
         super(context, attrs);
     }
 
@@ -39,7 +39,6 @@ public class WrappingViewPager extends ViewPager {
                 }
             }
 
-            // Not the best place to put this animation, but it works pretty good.
             int newHeight = MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY);
             if (getLayoutParams().height != 0 && heightMeasureSpec != newHeight) {
                 final int targetHeight = height;

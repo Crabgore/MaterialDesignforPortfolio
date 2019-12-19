@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/defaultColorPrimary" />
 
-            <com.geekbrains.materialdesignportfolio.WrappingViewPager
+            <com.geekbrains.materialdesignportfolio.MyViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
@@ -21,8 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NatureFragment extends Fragment {
-    public static MyTabsAdapter myTabAdapter;
-
     private List<Fragment> fragments = new ArrayList<>();
     private List<String> titles = new ArrayList<>();
 
@@ -34,8 +30,6 @@ public class NatureFragment extends Fragment {
 
         View layout = inflater.inflate(R.layout.nature_fragment, container, false);
 
-//        initUI(layout);
-
         initLists();
 
         initFragments();
@@ -43,17 +37,6 @@ public class NatureFragment extends Fragment {
         initPager(layout);
 
         return layout;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        myTabAdapter.notifyDataSetChanged();
-    }
-
-    private void initUI(View layout) {
-        NestedScrollView scrollView = layout.findViewById(R.id.nested);
-        scrollView.setFillViewport(true);
     }
 
     private void initLists() {
@@ -83,7 +66,7 @@ public class NatureFragment extends Fragment {
     }
 
     private void initPager(View layout) {
-        myTabAdapter = new MyTabsAdapter(getChildFragmentManager(), fragments, titles);
+        MyTabsAdapter myTabAdapter = new MyTabsAdapter(getChildFragmentManager(), fragments, titles);
 
         ViewPager viewPager = layout.findViewById(R.id.viewPager);
         viewPager.setAdapter(myTabAdapter);

@@ -25,21 +25,22 @@
                 android:id="@+id/enter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Введите текст" />
+                android:hint="@string/enter_text"
+                tools:ignore="Autofill,TextFields" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="Войти"/>
+            android:text="@string/login"/>
 
         <Button
             android:id="@+id/close"
             style="?attr/borderlessButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:text="Закрыть"/>
+            android:text="@string/close"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

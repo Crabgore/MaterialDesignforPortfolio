@@ -12,8 +12,6 @@ public class MyTabsAdapter extends FragmentPagerAdapter {
     private List<Fragment> fragments;
     private List<String> strings;
 
-    private int mCurrentPosition = 1;
-
     public MyTabsAdapter(@NonNull FragmentManager fm, List<Fragment> fragments, List<String> strings) {
         super(fm);
         this.fragments = fragments;

@@ -21,7 +21,7 @@ public class ItemFragment extends Fragment {
 
     public ItemFragment() {}
 
-    public ItemFragment(Drawable drawable, String string) {
+    ItemFragment(Drawable drawable, String string) {
         this.drawable = drawable;
         this.string = string;
     }
